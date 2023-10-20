@@ -142,7 +142,7 @@ const Header = () => {
                                         <Link
                                             href="#"
                                             className="text-white text-sm p-2 no-underline"
-                                            onClick={() => signOut({ callbackUrl: "http://localhost:3000/" })}
+                                            onClick={() => signOut({ callbackUrl: "https://ecommerce-landing-page-pied.vercel.app" })}
                                         >
                                             Log Out
                                         </Link>
