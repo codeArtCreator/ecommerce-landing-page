@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { signOut } from 'next-auth/react';
 import { useState } from 'react';
 import { useSession } from 'next-auth/react';
+import Loading from '../Loading/Loading';
 
 const Header = () => {
     const [isCardHidden, setCardHidden] = useState(true);
@@ -16,7 +17,7 @@ const Header = () => {
         return "You're not authorized";
     }
     if (status === 'loading') {
-        return "Loading...";
+        return <Loading />;
     }
 
     const toggleCard = () => {
