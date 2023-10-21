@@ -30,7 +30,7 @@ const LoginPage = (props) => {
         <>
             <ParticlesComponent />
 
-            <div className="bg-orange-200 px-16 py-5 shadow rounded-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <div id='login' className=" bg-orange-200 px-16 py-5 shadow rounded-lg absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="mt-1 flex flex-col items-center">
                     <h1 className="text-2xl xl:text-3xl font-extrabold">Sign up</h1>
                     <div className="flex-1 mt-8">
@@ -73,7 +73,7 @@ const LoginPage = (props) => {
                                 <span className="ml-4">Sign Up with GitHub</span>
                             </button> */}
                         </div>
-                        <div className="my-12 border-b text-center">
+                        <div id='signupwithemail' className="my-5 border-b text-center">
                             <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium transform translate-y-1/2">
                                 Or sign up with e-mail
                             </div>
