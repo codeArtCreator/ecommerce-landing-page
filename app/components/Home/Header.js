@@ -437,6 +437,38 @@ const Header = () => {
 
                 <button className="action-btn">
                     <ion-icon name="home-outline"></ion-icon>
+                    <div className="z-50">
+                            <ul className="flex items-center">
+                                <Link href="#" className="display-picture ml-auto" onClick={toggleCard}>
+                                    <img src={data?.user?.image || " "} alt="" className="h-[2.88rem] w-[2.88rem] object-cover rounded-full border-2 border-white hover:border-orange-500" />
+                                </Link>
+                            </ul>
+                            <div className={`card transition duration-500 ease-in-out absolute bottom-20 ${isCardHidden ? 'hidden' : ''}`}>
+                                <ul className="flex flex-col items-center bg-orange-400 rounded-xl px-5 list-none ">
+                                    <li className=" text-center font-semibold">
+                                        <span className="text-white text-sm no-underline p-2 tracking-wider">{data?.user.name.toUpperCase()}</span>
+                                    </li>
+                                    <li className="py-2 hover:bg-orange-500 transition duration-300 w-20 rounded-xl text-center">
+                                        <Link href="#" className="text-white text-sm no-underline p-2">Profile</Link>
+                                    </li>
+                                    <li className="pb-2 hover:bg-orange-500 transition duration-300 w-20 rounded-xl text-center">
+                                        <Link href="#" className="text-white text-sm p-2 no-underline">Account</Link>
+                                    </li>
+                                    <li className="pb-2 hover:bg-orange-500 transition duration-300 w-20 rounded-xl text-center">
+                                        <Link href="#" className="text-white text-sm p-2 no-underline">Settings</Link>
+                                    </li>
+                                    <li className="pb-2 hover:bg-orange-500 transition duration-300 w-20 rounded-xl text-center">
+                                        <Link
+                                            href="#"
+                                            className="text-white text-sm p-2 no-underline"
+                                            onClick={() => signOut({ callbackUrl: "https://ecommerce-landing-page-pied.vercel.app" })}
+                                        >
+                                            Log Out
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                 </button>
 
                 <button className="action-btn">
@@ -447,6 +479,7 @@ const Header = () => {
                 <button className="action-btn" data-mobile-menu-open-btn>
                     <ion-icon name="grid-outline"></ion-icon>
                 </button>
+                
 
             </div>
 
